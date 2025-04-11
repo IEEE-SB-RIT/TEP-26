@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdfdfd;
+    color: #333;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:20px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Helvetica',sans-serif;
+    font-weight: bold;
+}
+p{
+    text-align: justify;
+    line-height: 2;
+}
+.logo{
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+.dropsLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.dropsLinks a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.4s ease-in-out;
+}
+
+.dropsLinks a::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    z-index: -1;
+    transition: bottom 0.4s ease-in-out 0.1s;
+    border-radius: inherit;
+}
+
+.dropsLinks a:hover::before {
+    bottom: 0;
+}
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3e50;
+    padding: 3rem 2rem;
+    gap: 2rem;
+
+}
+.tepInfo h1 {
+    font-size: 2rem;
+    color: #ecf0f1;
+    margin-bottom: 1rem;
+}
+.tepInfo p {
+    color: white;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.image{
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.image img{
+    border-radius: 20px;
+    width: 100%;
+}
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 2rem;
+}
+#objectives{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 2rem;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dropsLinks {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+}
+
