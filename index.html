@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Technical Education Programme 2026 - Equipping students with cutting-edge technical skills and hands-on experience in emerging technologies.">
-    <title>Title</title>
+    <title>Technical Education Programme '26 | IEEE RAS</title>
     <link href="static/css/main.css" rel="stylesheet" type="text/css">
-    <script src="../TEP-26/static/js/index.js"></script>
+    <script src="static/js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 <main>
     <header>
         <div class="logo">
-            TECHNICAL EDUCATION PROGRAMME '26
+            <a href="#" class="logo">TECHNICAL EDUCATION PROGRAMME '26</a>
+            <div class="hamburgerMenu " onclick="toggleMenu()">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </div>
         </div>
-        <div class="dropsLinks">
+
+        <div class="dropsLinks" role="navigation" aria-label="main navigation">
             <a href="#">HOME</a>
             <a href="#">ABOUT</a>
             <a href="#">EVENTS</a>
             <a href="#contact">CONTACT</a>
         </div>
+        <div class="mobileMenu" role="navigation" aria-label="mobile navigation">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">EVENTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
     </header>
     <section id="home">
         <div class="tepInfo">
@@ -52,16 +66,14 @@
 
     <footer>
         <div class="container" id="contact">
-            <div class="contactInfo">
-                CONTACT US
-            </div>
+            <h3>CONTACT US</h3>
             <div class="social-links">
-                <a href="#" aria-label="Facebook">FB</a>
-                <a href="#" aria-label="Twitter">TW</a>
-                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-
     </footer>
 </main>
 </body>
