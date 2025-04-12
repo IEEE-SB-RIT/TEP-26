@@ -22,3 +22,4 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", toggleMenu);
   });
 });
+// Test comment to check if commit works
