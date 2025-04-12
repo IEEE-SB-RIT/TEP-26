@@ -51,6 +51,170 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+ /* Global resets and basic styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    color: wheat;
+  }
+  nav {
+    background: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    z-index: 1002;
+    position: relative;
+  }
+  .hamburger-svg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  .hamburger-svg path {
+    transform-origin: center;
+    transition: transform 0.3s ease 0.3s, opacity 0.3s ease;
+  }
+
+
+  .hamburger.active .middle {
+    opacity: 0;
+  }
+
+  /* Mobile Menu Styling */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    padding: 2rem;
+    transition: right 0.3s ease-out;
+    z-index: 1001;
+  }
+  .mobile-menu.active {
+    right: 0;
+  }
+  .mobile-menu-header {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  /* Simplified SVG Close Button - a plain white "X" */
+  .close-button {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .close-button svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .mobile-nav-links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+  }
+  .mobile-nav-links li {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .mobile-menu.active .mobile-nav-links li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  
+  .mobile-menu.active .mobile-nav-links li:nth-child(1) { transition-delay: 0.1s; }
+  .mobile-menu.active .mobile-nav-links li:nth-child(2) { transition-delay: 0.2s; }
+  .mobile-menu.active .mobile-nav-links li:nth-child(3) { transition-delay: 0.3s; }
+  .mobile-menu.active .mobile-nav-links li:nth-child(4) { transition-delay: 0.4s; }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+  }
+  /* Section & Footer Styles (for context) */
+  section {
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
 h2::after {
     content: '';
     position: absolute;
@@ -69,6 +233,24 @@ p {
     line-height: 2;
     margin-bottom: 1rem;
 }
+
+.navItem
+{
+    font-size: 1.2rem;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+.navItem:hover
+{
+    
+    background-color: grey;
+    transition: all 0.3s ease;
+    color: #fff;
+    border-radius: 1rem;
+}
+
 
 /* Logo */
 .logo {
