@@ -12,11 +12,7 @@
     --icons: #78e8e8;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 html, body {
     height: 100%;
@@ -41,6 +37,12 @@ header {
 }
 
 /* Heading */
+.mainHeading
+{
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+
+}
 h2 {
     text-align: center;
     font-size: 2rem;
@@ -52,11 +54,7 @@ h2 {
 }
 
  /* Global resets and basic styles */
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   a {
     text-decoration: none;
     color: wheat;
